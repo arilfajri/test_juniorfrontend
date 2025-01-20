@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ProductTable from "./components/ProductTable";
 
 export default function Home() {
