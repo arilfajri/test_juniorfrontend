@@ -64,11 +64,11 @@ const ProductTable: React.FC = () => {
       cancelButtonColor: "#d33333",
       confirmButtonText: "Yes, delete it!",
     }).then((result: SweetAlertResult) => {
-      Swal.fire({
-        title: "Product has been deleted!",
-        icon: "success",
-      });
       if (result.isConfirmed) {
+        Swal.fire({
+          title: "Product has been deleted!",
+          icon: "success",
+        });
         handleDelete(id);
       }
     });
