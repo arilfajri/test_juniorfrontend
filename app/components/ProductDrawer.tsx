@@ -47,6 +47,7 @@ const ProductDrawer: React.FC<ProductDrawerProps> = ({
       onSuccess(); // Panggil callback sukses
     } catch (error) {
       message.error("Operation failed!");
+      console.error(error);
     }
   };
 

@@ -1,7 +1,7 @@
 "use client";
 import { Table, Button, message, Space } from "antd";
 import React, { useEffect, useState } from "react";
-import Swal from "sweetalert2";
+import Swal, { SweetAlertResult } from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { getAllProducts, deleteProduct, Product } from "../utils/api";
 import ProductDrawer from "./ProductDrawer";
@@ -32,6 +32,7 @@ const ProductTable: React.FC = () => {
       }
     } catch (error) {
       message.error("Failed to load products");
+      console.error(error);
     } finally {
       setLoading(false);
     }
@@ -44,6 +45,7 @@ const ProductTable: React.FC = () => {
       fetchProducts(currentPage); // Refresh data
     } catch (error) {
       message.error("Failed to delete product");
+      console.error(error);
     }
   };
 
@@ -61,7 +63,7 @@ const ProductTable: React.FC = () => {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33333",
       confirmButtonText: "Yes, delete it!",
-    }).then((result: any) => {
+    }).then((result: SweetAlertResult) => {
       Swal.fire({
         title: "Product has been deleted!",
         icon: "success",
