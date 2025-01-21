@@ -1,3 +1,21 @@
+1. Sebelum menjalankan project ini setidaknya kalian memiliki:
+
+- Node.js: 16.x atau 18.x
+- npm: 8.x atau lebih tinggi
+- npx: Sesuai dengan versi npm (minimal 5.2.0)
+
+2. Lalu silahkan clone repository ini:
+
+- git clone <repository-url>
+- cd <project-folder>
+- npm install (untuk menginstall dependencies)
+
+3. Kemudian jalankan project dengan perintah:
+
+- npm run dev
+
+###
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
